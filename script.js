@@ -10,3 +10,24 @@ const clickFunction = () => {
 
 btn.addEventListener("click", clickFunction)
 
+
+function handleSubmit() {
+    const username = document.getElementById('username').value
+    const email = document.getElementById('email').value
+
+    if (username && email) {
+        const app = document.getElementById('app')
+        app.innerHTML = `
+        <div>
+            <h1>Hello ${username}</h1>
+            <p>Your email is ${email}</p>
+        </div>
+        `
+
+        // clear the username and email fields
+        document.getElementById('username').value = ''
+        document.getElementById('email').value = ''
+    } else {
+        alert('Please enter your name and email')
+    }
+}
