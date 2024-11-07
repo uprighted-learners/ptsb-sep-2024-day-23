@@ -11,7 +11,34 @@ const clickFunction = () => {
 btn.addEventListener("click", clickFunction)
 
 
-function handleSubmit() {
+// function handleSubmit() {
+//     const username = document.getElementById('username').value
+//     const email = document.getElementById('email').value
+
+//     if (username && email) {
+//         const app = document.getElementById('app')
+//         app.innerHTML = `
+//         <div>
+//             <h1>Hello ${username}</h1>
+//             <p>Your email is ${email}</p>
+//         </div>
+//         `
+
+//         // clear the username and email fields
+//         document.getElementById('username').value = ''
+//         document.getElementById('email').value = ''
+//     } else {
+//         alert('Please enter your name and email')
+//     }
+// }
+
+const form = document.getElementById('myForm')
+const app = document.getElementById('app')
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+    // get the values from the form
     const username = document.getElementById('username').value
     const email = document.getElementById('email').value
 
@@ -19,7 +46,7 @@ function handleSubmit() {
         const app = document.getElementById('app')
         app.innerHTML = `
         <div>
-            <h1>Hello ${username}</h1>
+            <h1 class="title">Hello ${username}</h1>
             <p>Your email is ${email}</p>
         </div>
         `
@@ -30,4 +57,4 @@ function handleSubmit() {
     } else {
         alert('Please enter your name and email')
     }
-}
+})
