@@ -7,7 +7,99 @@
     <title>Survey Application</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="form-container">
+      <h1>Survey Application</h1>
+      <form id="surveyForm">
+        <h2>User Feedback Survey</h2>
+
+        <!-- NAME -->
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <br />
+
+        <!-- AGE -->
+        <label for="age">Age</label>
+        <select id="age">
+          <option value="">Select your age</option>
+          <option value="under_18">Under 18</option>
+          <option value="18_24">18-24</option>
+          <option value="25_34">25-34</option>
+          <option value="35_44">35-44</option>
+          <option value="45_54">45-54</option>
+          <option value="55_64">55-64</option>
+          <option value="over_65">65+</option>
+        </select>
+
+        <br />
+
+        <!-- SATISFACTION RATIO -->
+        <p>Overall satisfaction with our service:</p>
+        <div class="satisfaction-container">
+          <label
+            ><input
+              type="radio"
+              name="satisfaction"
+              value="very_satisfied"
+            />Very Satisfied</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="satisfaction"
+              value="somewhat_satisfied"
+            />Somewhat Satisfied</label
+          >
+          <label
+            ><input type="radio" name="satisfaction" value="neutral" />Neither
+            Satisfied nor Dissatisfied</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="satisfaction"
+              value="somewhat_dissatisfied"
+            />Somewhat Dissatisfied</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="satisfaction"
+              value="very_dissatisfied"
+            />Very Dissatisfied</label
+          >
+        </div>
+
+        <!-- CONTACT PREFERENCES -->
+        <div class="contact-container">
+          <p>How do you prefer to be contacted?</p>
+          <label
+            ><input type="checkbox" name="contact" value="email" />Email</label
+          >
+          <label
+            ><input type="checkbox" name="contact" value="text_message" />Text
+            Message</label
+          >
+          <label
+            ><input type="checkbox" name="contact" value="phone" />Phone
+            Call</label
+          >
+          <label
+            ><input type="checkbox" name="contact" value="in_person" />In
+            Person</label
+          >
+        </div>
+
+        <br />
+
+        <!-- SUBMIT AND RESET -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+
+      <div id="summary"></div>
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
